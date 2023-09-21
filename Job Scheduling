@@ -1,0 +1,10 @@
+Job Scheduling api, as the name suggests, allows to schedule jobs while letting the system optimize based on memory, power, and connectivity conditions.
+The JobScheduler supports batch scheduling of jobs. The Android system can combine jobs so that battery consumption is reduced.
+JobManager makes handling uploads easier as it handles automatically the unreliability of the network. It also survives application restarts.
+
+Scenarios:
+Tasks that should be done once the device is connect to a power supply
+Tasks that require network access or a Wi-Fi connection.
+Task that are not critical or user facing
+Tasks that should be running on a regular basis as batch where the timing is not critical
+Reference
