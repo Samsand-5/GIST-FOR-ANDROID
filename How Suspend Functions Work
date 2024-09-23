@@ -1,0 +1,15 @@
+Suspend functions leverage the underlying mechanisms of Kotlin Coroutines, which include cooperative multitasking.
+When a coroutine calls a suspend function, it doesn’t block the entire thread. Instead, the coroutine is paused, and the thread is free to execute other tasks. 
+Once the asynchronous operation in the suspend function completes, the coroutine is resumed, and it can continue its execution from where it left off.
+
+This cooperative nature allows you to write asynchronous code in a sequential and structured manner, as if it were synchronous. 
+For example, you can perform multiple asynchronous operations sequentially without nesting callbacks:
+
+suspend fun performTasksSequentially() {
+    val result1 = fetchDataFromNetwork1()
+    val result2 = fetchDataFromNetwork2()
+    val result3 = processData(result1, result2)
+    updateUI(result3)
+}
+
+In this code, each asynchronous task is represented by a suspend function, and they are executed sequentially without blocking the main thread.
