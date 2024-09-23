@@ -5,3 +5,9 @@ Concurrency: They enable concurrency without the complexity of traditional callb
 Resource Efficiency: Suspend functions reduce the need for spawning numerous threads, which can be resource-intensive. This makes efficient use of system resources.
 
 Structured Concurrency: Suspend functions fit naturally within the concept of structured concurrency, ensuring that coroutines are launched and canceled in a controlled manner.
+
+When working with suspend functions, consider the following best practices:
+
+Use suspend functions for I/O-bound operations, network requests, file I/O, and database queries, as they prevent blocking the main thread.
+Avoid using suspend functions for CPU-bound operations, as they are better suited for non-blocking tasks.
+Leverage structured concurrency to manage the lifecycle of coroutines, ensuring they are launched and canceled appropriately.
