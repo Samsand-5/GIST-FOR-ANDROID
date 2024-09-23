@@ -1,0 +1,7 @@
+Readability: Suspend functions make code more readable and maintainable. You can write asynchronous code in a linear fashion, making it easier to understand.
+
+Concurrency: They enable concurrency without the complexity of traditional callback-based or thread-based approaches. Coroutines can be paused and resumed efficiently.
+
+Resource Efficiency: Suspend functions reduce the need for spawning numerous threads, which can be resource-intensive. This makes efficient use of system resources.
+
+Structured Concurrency: Suspend functions fit naturally within the concept of structured concurrency, ensuring that coroutines are launched and canceled in a controlled manner.
